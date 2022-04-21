@@ -1,0 +1,26 @@
+{
+	"apiVersion": 2,
+	"name": "exploring-blocks/bootstrap",
+	"version": "0.1.0",
+	"title": "Bootstrap Block",
+	"category": "exploring-blocks",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support build step required.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Hello World!"
+		},
+		"color": {
+			"type": "string",
+			"default": "#00ff00"
+		}
+	},
+	"textdomain": "exploring-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

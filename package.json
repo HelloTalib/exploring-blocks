@@ -1,0 +1,28 @@
+{
+	"name": "exploring-blocks",
+	"version": "0.1.0",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"author": "The WordPress Contributors",
+	"license": "GPLv3",
+	"main": "build/index.js",
+	"prettier": "@wordpress/prettier-config",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"scripts": {
+		"build": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts build",
+		"format": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts format",
+		"lint:css": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts lint-style",
+		"lint:js": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts lint-js",
+		"packages-update": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts packages-update",
+		"plugin-zip": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts plugin-zip",
+		"start": "NODE_OPTIONS=--openssl-legacy-provider wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^10.0.0",
+		"@wordpress/prettier-config": "^1.1.1",
+		"@wordpress/scripts": "^20.0.2",
+		"@wordpress/stylelint-config": "^20.0.0",
+		"eslint-config-prettier": "^8.3.0"
+	}
+}
