@@ -71,6 +71,11 @@ final class Exploring_blocks_Class {
 	}
 
 	/**
+	 * Define the plugin constants
+	 */
+
+
+	/**
 	 * Blocks Registration
 	 */
 
@@ -82,8 +87,33 @@ final class Exploring_blocks_Class {
 	 * Blocks Initialization
 	 */
 	public function exploring_blocks_blocks_init() {
-		// register single block
 		$this->exploring_blocks_register_block('bootstrap');
+		$this->exploring_blocks_register_block(
+			'latest-post',
+			[
+				'render_callback' =>
+				[$this, 'gutenberg_examples_dynamic_render_callback']
+			]
+		);
+	}
+
+	public function gutenberg_examples_dynamic_render_callback($atts) {
+		$args = [
+			'posts_per_page' => 5,
+			'post_status' => 'publish'
+		];
+		$wp_query = new WP_Query($args);
+		if (!empty($wp_query)) :
+			$posts = '<div ' . get_block_wrapper_attributes()	. '>';
+			while ($wp_query->have_posts()) {
+				$wp_query->the_post();
+				$posts .= '<h1>';
+				$posts .= '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+				$posts .= '</h1>';
+			}
+			$posts .= '</div>';
+			return $posts;
+		endif;
 	}
 
 	/**
@@ -94,8 +124,8 @@ final class Exploring_blocks_Class {
 		return array_merge(
 			array(
 				array(
-					'slug'  => 'exploring_blocks',
-					'title' => __('Exploring Blocks', 'exploring_blocks'),
+					'slug'  => 'exploring-blocks',
+					'title' => __('Exploring Blocks', 'exploring-blocks'),
 				),
 			),
 			$categories,

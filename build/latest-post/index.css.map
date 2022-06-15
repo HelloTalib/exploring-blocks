@@ -1,0 +1,1 @@
+{"version":3,"file":"latest-post/index.css","mappings":";;;AAAA;;CAAA;AAIA;EACC;AAAD;;AAGA;EACC;AAAD,C","sources":["webpack://exploring-blocks/./src/latest-post/editor.scss"],"sourcesContent":["/*\n* Style Works for Editor Only\n*/\n\n.wp-block-create-block-exploring_blocks {\n\tborder: 1px dotted rgb(1, 1, 1);\n}\n\n.mmm{\n\ttext-align: center;\n}"],"names":[],"sourceRoot":""}

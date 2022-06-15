@@ -1,0 +1,1 @@
+{"version":3,"file":"bootstrap/style-index.css","mappings":";;;AAAA;;CAAA;AAIA;EACC;EACA;EACA;AAAD,C","sources":["webpack://exploring-blocks/./src/bootstrap/style.scss"],"sourcesContent":["/*\n* Style Works for both Editor and Frontend\n*/\n\n.wp-block-create-block-exploring_blocks {\n\tbackground-color: #21759b;\n\tcolor: #fff;\n\tpadding: 2px;\n}\n"],"names":[],"sourceRoot":""}

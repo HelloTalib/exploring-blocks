@@ -1,18 +1,18 @@
 {
 	"apiVersion": 2,
-	"name": "exploring-blocks/bootstrap",
+	"name": "exploring-blocks/latest-post",
 	"version": "0.1.0",
-	"title": "Bootstrap Block",
+	"title": "Latest Posts",
 	"category": "exploring-blocks",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support build step required.",
+	"icon": "admin-post",
+	"description": "Display and filter latest posts",
 	"supports": {
 		"html": false
 	},
 	"attributes": {
-		"content": {
-			"type": "string",
-			"default": "Hello World!"
+		"numberOfPosts": {
+			"type": "number",
+			"default": 5
 		},
 		"color": {
 			"type": "string",
